@@ -8,7 +8,10 @@ from .app import Firefly
 from .validator import ValidationError, FireflyError
 from .version import __version__
 from wsgiref.simple_server import make_server
-
+try:
+    import configparser
+except:
+    from six.moves import configparser
 logger = logging.getLogger("firefly")
 
 def load_from_env():
