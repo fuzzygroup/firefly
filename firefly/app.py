@@ -8,6 +8,10 @@ from .validator import validate_args, ValidationError
 from .utils import json_encode, is_file, FileIter
 from .version import __version__
 import threading
+try:
+    import configparser
+except:
+    from six.moves import configparser
 from wsgiref.simple_server import make_server
 
 try:
