@@ -1,5 +1,8 @@
 from .utils import PY2, PY3
-
+try:
+    import configparser
+except:
+    from six.moves import configparser
 if PY3:
     from inspect import signature
 else:
