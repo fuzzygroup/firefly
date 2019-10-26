@@ -1,6 +1,9 @@
 import sys
 import json
-
+try:
+    import configparser
+except:
+    from six.moves import configparser
 PY2 = (sys.version_info.major == 2)
 PY3 = (sys.version_info.major == 3)
 
