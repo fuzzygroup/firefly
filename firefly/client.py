@@ -3,7 +3,10 @@ from requests import ConnectionError
 from .validator import ValidationError
 import logging
 import time
-
+try:
+    import configparser
+except:
+    from six.moves import configparser
 logger = logging.getLogger(__name__)
 
 class Client:
